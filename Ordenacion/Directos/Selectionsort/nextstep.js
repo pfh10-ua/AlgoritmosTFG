@@ -4,7 +4,7 @@ function nextStep() {
   
     if (globalVariables.i >= data.length - 1) { // Si ya se completaron todas las iteraciones
       sorted = true; // Marcar el arreglo como ordenado
-      renderBars(); // Actualizar el gráfico
+      renderGraphic(); // Actualizar el gráfico
       return;
     }
   
@@ -28,5 +28,5 @@ function nextStep() {
       globalVariables.minIndex = globalVariables.i;
       //console.log("Despues de finalizar bucle j: i->" + globalVariables.i + " j->" + globalVariables.j + " min->" + globalVariables.minIndex);
     }
-    renderBars(); // Actualizar el gráfico
+    renderGraphic(); // Actualizar el gráfico
 }
