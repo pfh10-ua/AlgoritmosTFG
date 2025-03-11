@@ -14,7 +14,7 @@ module.exports ={
 
         if (variables.i >= variables.data.length - 1) {
             variables.sorted = true; // Marcar como ordenado
-            renderGraphic(); // Actualizar el gráfico
+            renderGraphic(variables); // Actualizar el gráfico
             return;
         }
 
@@ -36,7 +36,7 @@ module.exports ={
             variables.minIndex = variables.i;
         }
 
-        renderGraphic(); // Actualizar el gráfico
+        renderGraphic(variables); // Actualizar el gráfico
     }
 
 };
