@@ -1,29 +1,37 @@
-if (sorted) return; // Si ya está ordenado, no hacer nada
+export const variables = {
+    i: 0, // Índice de la iteración externa
+    j: 1, // Índice de la iteración interna
+    minIndex: 0, // Índice del mínimo encontrado
+    colors: ["orange", "yellow", "red"], // Colores para cada barra
+    sorted: false, // Indica si el arreglo ya está ordenado
+    data: [30, 80, 45, 60, 20, 90, 50] // Datos a ordenar
+}
 
-if (globalVariables.i >= data.length - 1) { // Si ya se completaron todas las iteraciones
-    sorted = true; // Marcar el arreglo como ordenado
+export function nextstep(){
+    if (this.sorted) return; // Si ya está ordenado, no hacer nada
+
+    if (variables.i >= variables.data.length - 1) { // Si ya se completaron todas las iteraciones
+        variables.sorted = true; // Marcar el arreglo como ordenado
+        renderGraphic(); // Actualizar el gráfico
+        return;
+    }
+
+    // Comparar y actualizar el índice del mínimo
+    if (variables.data[variables.j] < variables.data[variables.minIndex]) {
+        variables.minIndex = variables.j; // Actualizar el índice del mínimo encontrado 
+    }
+
+    variables.j++;
+
+    if (variables.j === variables.data.length) { // Si se completó la iteración interna
+        // Intercambiar los elementos data[i] y data[minIndex]
+        [variables.data[variables.i], variables.data[variables.minIndex]] = [variables.data[variables.minIndex], variables.data[variables.i]];
+
+        // Avanzar a la siguiente iteración externa
+        variables.i++;
+        variables.j = variables.i + 1;
+        variables.minIndex = variables.i;
+    
+    }
     renderGraphic(); // Actualizar el gráfico
-    return;
 }
-
-// Comparar y actualizar el índice del mínimo
-if (data[globalVariables.j] < data[globalVariables.minIndex]) {
-    globalVariables.minIndex = globalVariables.j; // Actualizar el índice del mínimo encontrado 
-}
-
-globalVariables.j++;
-
-if (globalVariables.j === data.length) { // Si se completó la iteración interna
-    // Intercambiar los elementos data[i] y data[minIndex]
-    const temp = data[globalVariables.i];
-    data[globalVariables.i] = data[globalVariables.minIndex];
-    data[globalVariables.minIndex] = temp;
-
-    // Avanzar a la siguiente iteración externa
-    //console.log("Antes de finalizar bucle j: i->" + globalVariables.i + " j->" + globalVariables.j + " min->" + globalVariables.minIndex);
-    globalVariables.i++;
-    globalVariables.j = globalVariables.i + 1;
-    globalVariables.minIndex = globalVariables.i;
-    //console.log("Despues de finalizar bucle j: i->" + globalVariables.i + " j->" + globalVariables.j + " min->" + globalVariables.minIndex);
-}
-renderGraphic(); // Actualizar el gráfico
