@@ -7,7 +7,10 @@ module.exports ={
         },
         colors: ["orange", "yellow", "red"], // Colores para cada barra
         sorted: false, // Indica si el arreglo ya está ordenado
-        data: [30, 80, 45, 60, 20, 90, 50] // Datos a ordenar
+        data: [30, 80, 45, 60, 20, 90, 50], // Datos a ordenar
+        trazas: {
+            cpp:[6,8,8,8,9,8,12,6,[8,9],8,8,8,8,8,8,8,8,8,8,8,8,8,8]
+        }
     },
     nextstep: function(){
         const { variables } = this; // Acceder a las variables del objeto exportado
