@@ -9,7 +9,7 @@ module.exports ={
         sorted: false, // Indica si el arreglo ya está ordenado
         data: [30, 80, 45, 60, 20, 90, 50], // Datos a ordenar
         trazas: {
-            cpp:[8,8,[9,10],8,8,13,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8]
+            cpp:[8,8,[9,10],8,13,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8]
         }
     },
     nextstep: function(){
