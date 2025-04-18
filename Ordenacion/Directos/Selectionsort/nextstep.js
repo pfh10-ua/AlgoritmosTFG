@@ -53,32 +53,32 @@ module.exports ={
     getFinalLine: function (language) {
         switch (language) {
             case 'cpp': return 15;
-            case 'py': return 14;
-            case 'java': return 16;
+            // case 'py': return 14;
+            // case 'java': return 16;
             default: return '-';
         }
     },
     getUpdateMinIndexLine: function (language) {
         switch (language) {
             case 'cpp': return [9,10];
-            case 'py': return 8;
-            case 'java': return 10;
+            // case 'py': return 8;
+            // case 'java': return 10;
             default: return '-';
         }
     },
     getDefaultComparisonLine: function (language) {
         switch (language) {
             case 'cpp': return 8;
-            case 'py': return 7;
-            case 'java': return 9;
+            // case 'py': return 7;
+            // case 'java': return 9;
             default: return '-';
         }
     },
     getSwapLine: function (language) {
         switch (language) {
             case 'cpp': return 13;
-            case 'py': return 12;
-            case 'java': return 14;
+            // case 'py': return 12;
+            // case 'java': return 14;
             default: return '-';
         }
     }
