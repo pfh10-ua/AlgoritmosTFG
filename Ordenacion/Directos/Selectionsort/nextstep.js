@@ -60,7 +60,7 @@ module.exports ={
     },
     getUpdateMinIndexLine: function (language) {
         switch (language) {
-            case 'cpp': return 9;
+            case 'cpp': return [9,10];
             case 'py': return 8;
             case 'java': return 10;
             default: return '-';
