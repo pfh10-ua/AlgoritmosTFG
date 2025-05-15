@@ -10,7 +10,7 @@ module.exports ={
         data: [30, 80, 45, 60, 20, 90, 50], // Datos a ordenar
         lineaActual: {
             cpp: 8, 
-            py: 7, 
+            py: 9, 
             js: 8
         }, // Línea actual de ejecución
         language: "" // Lenguaje de programación
