@@ -38,7 +38,7 @@ module.exports ={
             indices.i++;
             indices.key = data[indices.i]
             indices.j = indices.i - 1;
-            variables.lineaActual[language] = this.getInsertAndNewValues(language); // Intercambio
+            variables.lineaActual[language] = this.getInsertAndNewValues(language);
         }
     },
     getFinalLine: function (language) {
@@ -62,5 +62,4 @@ module.exports ={
             default: return '-';
         }
     }
-
 };
