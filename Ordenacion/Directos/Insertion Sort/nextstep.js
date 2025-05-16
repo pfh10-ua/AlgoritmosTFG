@@ -28,24 +28,17 @@ module.exports ={
         }
 
         if (indices.j >= 0 && indices.key < data[indices.j]) {
-            console.log("Hola" + indices.j);
             data[indices.j + 1] = data[indices.j];
             indices.j--;
-            console.log("Adios" + indices.j);
             variables.lineaActual[language] = this.getMoveToRight(language);
         }
         else {
             data[indices.j + 1] = indices.key //Inserta en el sitio
-            variables.lineaActual[language] = this.getInsert(language);
-        }
-
-        console.log(indices.j);
-        if (indices.j < 0) {
             // Avanzar a la siguiente iteración externa
             indices.i++;
             indices.key = data[indices.i]
             indices.j = indices.i - 1;
-            variables.lineaActual[language] = this.getNewValues(language); // Intercambio
+            variables.lineaActual[language] = this.getInsertAndNewValues(language); // Intercambio
         }
     },
     getFinalLine: function (language) {
@@ -62,16 +55,9 @@ module.exports ={
             default: return '-';
         }
     },
-    getInsert: function (language) {
+    getInsertAndNewValues: function (language) {
         switch (language) {
-            case 'cpp': return 16;
-            case 'py': return 12;
-            default: return '-';
-        }
-    },
-    getNewValues: function (language) {
-        switch (language) {
-            case 'cpp': return [7,8];
+            case 'cpp': return [7,8,16];
             case 'py': return 16;
             default: return '-';
         }
