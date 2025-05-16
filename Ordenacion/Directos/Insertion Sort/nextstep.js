@@ -27,10 +27,11 @@ module.exports ={
             return;
         }
 
-        
         if (indices.j >= 0 && indices.key < data[indices.j]) {
+            console.log("Hola" + indices.j);
             data[indices.j + 1] = data[indices.j];
             indices.j--;
+            console.log("Adios" + indices.j);
             variables.lineaActual[language] = this.getMoveToRight(language);
         }
         else {
