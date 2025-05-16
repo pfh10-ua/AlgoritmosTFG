@@ -3,11 +3,11 @@ module.exports ={
         indices:{
             i:1,
             j:0,
-            key:190
+            key:12 //Valor que ocupa data[i]
         },
         colors: ["orange", "blue"], // Colores para cada barra
         sortedOrFind: false, // Indica si el arreglo ya está ordenado
-        data: [11, 190, 13, 5, 6], // Datos a ordenar
+        data: [30, 12, 45, 60, 20, 90, 50], // Datos a ordenar
         lineaActual: {
             cpp: 8, 
             py: 9
