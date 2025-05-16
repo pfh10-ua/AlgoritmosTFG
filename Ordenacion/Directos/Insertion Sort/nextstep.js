@@ -21,6 +21,7 @@ module.exports ={
 
         const {indices, data, language } = variables;
 
+        console.log(process.env.REPO_NAME);
         if (indices.i >= data.length) {
             variables.sortedOrFind = true; // Marcar como ordenado
             variables.lineaActual[language] = this.getFinalLine(language); //Línea final
@@ -44,21 +45,18 @@ module.exports ={
     getFinalLine: function (language) {
         switch (language) {
             case 'cpp': return 18;
-            case 'py': return 17;
             default: return '-';
         }
     },
     getMoveToRight: function (language) {
         switch (language) {
             case 'cpp': return [11,12,13,14];
-            case 'py': return [13,14];
             default: return '-';
         }
     },
     getInsertAndNewValues: function (language) {
         switch (language) {
             case 'cpp': return [7,8,16];
-            case 'py': return 16;
             default: return '-';
         }
     }
