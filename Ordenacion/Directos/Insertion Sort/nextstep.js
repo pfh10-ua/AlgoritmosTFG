@@ -9,8 +9,7 @@ module.exports ={
         sortedOrFind: false, // Indica si el arreglo ya está ordenado
         data: [30, 12, 45, 60, 20, 90, 50], // Datos a ordenar
         lineaActual: {
-            cpp: 8, 
-            py: 9
+            cpp: 8
         }, // Línea actual de ejecución
         language: "" // Lenguaje de programación
     },
@@ -21,7 +20,6 @@ module.exports ={
 
         const {indices, data, language } = variables;
 
-        console.log(process.env.REPO_NAME);
         if (indices.i >= data.length) {
             variables.sortedOrFind = true; // Marcar como ordenado
             variables.lineaActual[language] = this.getFinalLine(language); //Línea final
