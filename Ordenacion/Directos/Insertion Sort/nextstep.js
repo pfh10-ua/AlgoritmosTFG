@@ -7,7 +7,7 @@ module.exports ={
         },
         colors: ["orange", "blue"], // Colores para cada barra
         sortedOrFind: false, // Indica si el arreglo ya está ordenado
-        data: [12, 11, 13, 5, 6], // Datos a ordenar
+        data: [11, 110000, 13, 5, 6], // Datos a ordenar
         lineaActual: {
             cpp: 8, 
             py: 9
@@ -21,7 +21,7 @@ module.exports ={
 
         const {indices, data, language } = variables;
 
-        if (indices.i >= data.length - 1) {
+        if (indices.i >= data.length) {
             variables.sortedOrFind = true; // Marcar como ordenado
             variables.lineaActual[language] = this.getFinalLine(language); //Línea final
             return;
