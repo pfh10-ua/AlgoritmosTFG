@@ -38,6 +38,7 @@ module.exports ={
             variables.lineaActual[language] = this.getInsert(language);
         }
 
+        console.log(indices.j);
         if (indices.j < 0) {
             // Avanzar a la siguiente iteración externa
             indices.i++;
