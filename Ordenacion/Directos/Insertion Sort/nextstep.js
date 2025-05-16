@@ -7,7 +7,7 @@ module.exports ={
         },
         colors: ["orange", "blue"], // Colores para cada barra
         sortedOrFind: false, // Indica si el arreglo ya está ordenado
-        data: [11, 110000, 13, 5, 6], // Datos a ordenar
+        data: [11, 110, 13, 5, 6], // Datos a ordenar
         lineaActual: {
             cpp: 8, 
             py: 9
