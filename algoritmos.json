@@ -20,7 +20,7 @@
         "pathGithub": "Ordenacion/Directos/Selectionsort/"
     },
     "secuencial": {
-        "title": "Secuencial",
+        "title": "Búsqueda Secuencial",
         "description": "La búsqueda secuencial es un algoritmo simple que recorre una lista de elementos en busca de un valor específico. Comienza en el primer elemento de la lista y se mueve uno por uno hasta encontrar el valor deseado o llegar al final de la lista.",
         "complexity": {
             "best": "O(1)",
@@ -38,6 +38,16 @@
             "worst": "O(n^2)"
         },
         "pathGithub": "Ordenacion/Directos/Insertion Sort/"
+    },
+    "binaria": {
+        "title": "Búsqueda Binaria",
+        "description": "La búsqueda binaria es un algoritmo eficiente para encontrar un valor en una lista ordenada. Comienza comparando el valor buscado con el elemento en el centro de la lista y, dependiendo del resultado, descarta la mitad de los elementos, repitiendo este proceso hasta encontrar el valor o agotar las posibilidades.",
+        "complexity": {
+            "best": "O(1)",
+            "average": "O(log n)",
+            "worst": "O(log n)"
+        },
+        "pathGithub": "Búsqueda/Binaria/"
     }
 
 }
