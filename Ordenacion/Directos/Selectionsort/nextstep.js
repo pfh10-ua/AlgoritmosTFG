@@ -7,11 +7,10 @@ module.exports ={
         },
         colors: ["orange", "yellow", "red"], // Colores para cada barra
         sortedOrFind: false, // Indica si el arreglo ya está ordenado
-        data: [150, 80, 45, 60, 20, 90, 50], // Datos a ordenar
+        data: [30, 80, 45, 60, 20, 90, 50], // Datos a ordenar
         lineaActual: {
-            cpp: 8, 
-            py: 9, 
-            js: 8
+            cpp: 8,
+            py: 9
         }, // Línea actual de ejecución
         language: "" // Lenguaje de programación
     },
@@ -37,13 +36,13 @@ module.exports ={
             variables.lineaActual[language] = this.getDefaultComparisonLine(language); //Comparación por defecto
         }
 
-        indices.j++; // Avanzar al siguiente índice de la iteración interna
+        indices.j++; // Avanzar a la siguiente iteración bucle interno
 
         if (indices.j === data.length) {
             // Intercambiar los elementos data[i] y data[minIndex]
             [data[indices.i], data[indices.minIndex]] = [data[indices.minIndex], data[indices.i]];
 
-            // Avanzar a la siguiente iteración externa
+            // Avanzar a la siguiente iteración bucle externo
             indices.i++;
             indices.j = indices.i + 1;
             indices.minIndex = indices.i;
